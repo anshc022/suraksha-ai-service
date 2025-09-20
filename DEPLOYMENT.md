@@ -35,7 +35,7 @@ git push -u origin main
    Region: Choose closest to your users
    Branch: main
    Runtime: Python 3
-   Build Command: pip install -r requirements.txt
+   Build Command: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
    Start Command: python app.py
    ```
 
@@ -46,7 +46,7 @@ git push -u origin main
    DEBUG=false
    MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/suraksha
    MONGODB_DATABASE=suraksha
-   PYTHON_VERSION=3.9.16
+   PYTHON_VERSION=3.11.9
    ```
 
 ### 3. Production Environment Variables
