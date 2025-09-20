@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: suraksha-ai-service
+    env: python
+    runtime: python
+    plan: free
+    buildCommand: pip install --upgrade pip==23.1.2 setuptools==67.8.0 wheel==0.40.0 && pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: AI_HOST
+        value: 0.0.0.0
+      - key: AI_PORT
+        value: 5000
+      - key: DEBUG
+        value: false
+      - key: PYTHON_VERSION
+        value: 3.11.5

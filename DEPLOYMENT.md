@@ -35,7 +35,7 @@ git push -u origin main
    Region: Choose closest to your users
    Branch: main
    Runtime: Python 3
-   Build Command: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+   Build Command: pip install --upgrade pip==23.1.2 setuptools==67.8.0 wheel==0.40.0 && pip install -r requirements.txt
    Start Command: python app.py
    ```
 
@@ -46,7 +46,7 @@ git push -u origin main
    DEBUG=false
    MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/suraksha
    MONGODB_DATABASE=suraksha
-   PYTHON_VERSION=3.11.9
+   PYTHON_VERSION=3.11.5
    ```
 
 ### 3. Production Environment Variables
@@ -94,8 +94,9 @@ AI_SERVICE_URL=https://your-ai-service.onrender.com
 ### 7. Common Issues & Solutions
 
 **Python Version Issues**:
-- Set `PYTHON_VERSION=3.9.16` in Render environment variables
+- Set `PYTHON_VERSION=3.11.5` in Render environment variables
 - Ensure requirements.txt has compatible versions
+- Avoid Python 3.13 due to setuptools compatibility issues
 
 **Memory Issues**:
 - ML models can be memory intensive
